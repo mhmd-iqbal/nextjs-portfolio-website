@@ -81,7 +81,7 @@ export default function Contact() {
         />
         <ReCAPTCHA
           className="my-4"
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+          sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           ref={recaptchaRef}
           onChange={handleCaptchaSubmission}
         />
