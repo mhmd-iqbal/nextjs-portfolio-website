@@ -64,6 +64,12 @@ export const projectsData = [
     description:
       "I made this project just for learning purposes.",
     tags: ["ReactJS", "Next.js", "MongoDB", "Tailwind", "Mongoose", "Next-Auth"],
+    links: [
+      {
+        url: "https://belajar-nextjs-fullstack-iqbal.vercel.app/",
+        name: "Demo",
+      }
+    ],
     imageUrl: promptopiaImg,
   },
   {
@@ -71,6 +77,12 @@ export const projectsData = [
     description:
       "Web app that helps company in viewing the company's financial position. Currently used by PT Cermat Pratama Sejahtera.",
     tags: ["Laravel", "Bootstrap", "MySQL", "DataTable", "jQuery"],
+    links: [
+      {
+        url: "",
+        name: "",
+      }
+    ],
     imageUrl: SiKeuanganImg,
   },
   {
@@ -78,6 +90,12 @@ export const projectsData = [
     description:
       "Web app that helps administrator in collecting data on PT Cermat Pratama Sejahtera outsourcing employees.",
     tags: ["ReactJS", "Material UI", "MySQL", "Laravel", "Restful API", "Redux"],
+    links: [
+      {
+        url: "",
+        name: "",
+      }
+    ],
     imageUrl: SiKepegawaianImg,
   },
 ] as const;

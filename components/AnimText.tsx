@@ -1,5 +1,5 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useMotionValue, animate } from "framer-motion";
+import { useEffect } from "react";
 import RedoAnimText from "./RedoAnimText";
 import CursorBlinker from "./CursorBlinker";
 
