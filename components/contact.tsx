@@ -1,15 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import ReCAPTCHA from "react-google-recaptcha"
+import { verifyCaptcha } from "@/lib/verifyCaptcha";
+import { FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const [isVerified, setIsverified] = useState<boolean>(false)
+
+  async function handleCaptchaSubmission(token: string | null) {
+    // Server function to verify captcha
+    await verifyCaptcha(token)
+      .then(() => setIsverified(true))
+      .catch(() => setIsverified(false))
+  }
 
   return (
     <motion.section
@@ -67,7 +79,21 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <SubmitBtn />
+        <ReCAPTCHA
+          className="my-4"
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+          ref={recaptchaRef}
+          onChange={handleCaptchaSubmission}
+        />
+
+        <button
+          type="submit"
+          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-700 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+          disabled={!isVerified}
+        >
+          Submit{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+        </button>
       </form>
     </motion.section>
   );
