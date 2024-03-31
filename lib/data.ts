@@ -103,7 +103,10 @@ export const projectsData = [
 export const skillsData = [
   "HTML",
   "CSS",
+  "PHP",
   "JavaScript",
+  "Laravel",
+  "CodeIgniter",
   "ReactJS",
   "Next.js",
   "Node.js",
@@ -115,8 +118,6 @@ export const skillsData = [
   "MySQL",
   "MongoDB",
   "Mongoose",
-  "Redux",
-  "TypeScript",
   "Express",
   "Framer Motion",
 ] as const;
