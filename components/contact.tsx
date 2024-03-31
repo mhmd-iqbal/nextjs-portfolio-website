@@ -61,6 +61,9 @@ export default function Contact() {
             return;
           }
 
+          recaptchaRef.current?.reset();
+          setIsverified(!isVerified);
+
           toast.success("Email sent successfully!");
         }}
       >
