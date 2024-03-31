@@ -1,10 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import promptopiaImg from "@/public/projects/belajar-nextjs.png";
+import SiKepegawaianImg from "@/public/projects/si-kepegawaian.png";
+import SiKeuanganImg from "@/public/projects/si-keuangan.png";
 
 export const links = [
   {
@@ -35,52 +33,52 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Freelance Web Developer",
+    location: "Self-employee, Palembang",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      'Creating dynamic and responsive web applications according to client requests. Focuses on projects that use the Laravel and CodeIgniter framework.',
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2020 - present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Back-end Web Developer",
+    location: "Phylot Integrator System (Startup), Palembang",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "As a Back-end Web Developer, I'm responsible for creating web applications using the PHP CodeIgniter framework to integrate with automated parking controllers.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Dec 2021 - Mar 2022",
+  },
+  {
+    title: "IT Staff (Web Programmer)",
+    location: "PT Cermat Pratama Sejahtera, Palembang",
+    description:
+      "Creating responsive, dynamic, and modern web-based applications using PHP (native, Laravel), JavaScript (vanilla, jQuery, ReactJS), and Bootstrap for internal company use. Designing and building databases for applications. Identifying and resolving internet network issues. Conducting computer hardware maintenance and repairs.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Oct 2022 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Promptopia - Fullstack NextJS with Next-Auth",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I made this project just for learning purposes.",
+    tags: ["ReactJS", "Next.js", "MongoDB", "Tailwind", "Mongoose", "Next-Auth"],
+    imageUrl: promptopiaImg,
   },
   {
-    title: "rmtDev",
+    title: "SiKeuangan",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Web app that helps company in viewing the company's financial position. Currently used by PT Cermat Pratama Sejahtera.",
+    tags: ["Laravel", "Bootstrap", "MySQL", "DataTable", "jQuery"],
+    imageUrl: SiKeuanganImg,
   },
   {
-    title: "Word Analytics",
+    title: "SiKepegawaian",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Web app that helps administrator in collecting data on PT Cermat Pratama Sejahtera outsourcing employees.",
+    tags: ["ReactJS", "Material UI", "MySQL", "Laravel", "Restful API", "Redux"],
+    imageUrl: SiKepegawaianImg,
   },
 ] as const;
 
@@ -88,20 +86,19 @@ export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
-  "React",
+  "ReactJS",
   "Next.js",
   "Node.js",
   "Git",
+  "Bootstrap",
   "Tailwind",
+  "Material UI",
   "Prisma",
+  "MySQL",
   "MongoDB",
+  "Mongoose",
   "Redux",
-  "GraphQL",
-  "Apollo",
+  "TypeScript",
   "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
   "Framer Motion",
 ] as const;
